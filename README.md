@@ -9,7 +9,20 @@ To load the code, attach the packages:
 You can then inspect the curves as follows:
 	
 	> curves := TorsionCurvesGenus2();
-	> TorsionSubgroup(curves2[19]);
+
+This loads the genus 2 curves in the file.
+
+	> curves[19];
+	x^6 - 11*x^5 + 193/4*x^4 - 111*x^3 + 120*x^2 - 54*x + 9
+
+We can check if the curve is geometrically simple.
+
+	> IsGeometricallySimple(curves[19]);
+	true 11
+
+And inspect its torsion subgroup.
+
+	> TorsionSubgroup(curves[19]);
 	Abelian Group isomorphic to Z/26
 	Defined on 1 generator
 	Relations:
